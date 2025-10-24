@@ -33,7 +33,7 @@ if mydb.is_connected():
         ("Carol", "123 Maple Rd", "carol@example.com")
     ]
     mycursor.executemany(sql, val)
-    mydb.commit()
+    mydb.commit() #commit changes to database
     print(mycursor.rowcount, "records inserted.")
 '''
 #insert multiple values
