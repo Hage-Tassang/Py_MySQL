@@ -27,7 +27,9 @@ except Error as e:
 mycursor = None
 if mydb.is_connected():
     mycursor = mydb.cursor()
-    #mycursor.execute("CREATE DATABASE pysql_db")
+    #to create a new database uncomment the following line
+
+    mycursor.execute("CREATE DATABASE psql_db2")
     if mycursor:
         mycursor.execute("SHOW DATABASES")
         for db in mycursor:
