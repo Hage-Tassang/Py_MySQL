@@ -6,7 +6,6 @@ try:
         host="localhost",
         user="root",
         password="1001",
-        database="pysql_db"
     )
     if mydb.is_connected():
 

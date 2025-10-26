@@ -35,7 +35,7 @@ try:
         print("Dropped existing 'customers' table (if any).")
 
         create_query = """
-        CREATE TABLE customers (
+        CREATE TABLE employee (
             id INT AUTO_INCREMENT PRIMARY KEY,
             name VARCHAR(255) NOT NULL,
             address VARCHAR(255),

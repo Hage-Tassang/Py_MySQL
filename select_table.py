@@ -40,7 +40,7 @@ mycursor = mydb.cursor()
 
 print("\n-----select specific columns-----")
 #selecting specific columns
-mycursor.execute("SELECT address, email FROM customers")
+mycursor.execute("SELECT address, email FROM employee")
 my_res1 = mycursor.fetchall()
 for record in my_res1:
     print(record)

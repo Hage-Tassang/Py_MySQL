@@ -23,10 +23,10 @@ else:
  '''
 
 
-'''
+
 if mydb.is_connected():
     mycursor = mydb.cursor()
-    sql = "INSERT INTO customers (name,address,email) VALUES (%s, %s, %s)"
+    sql = "INSERT INTO employee (name,address,email) VALUES (%s, %s, %s)"
     val = [
         ("Alice", "Wonderland", "alice@example.com"),
         ("Bob", "Builder Street", "bob@example.com"),
@@ -35,12 +35,12 @@ if mydb.is_connected():
     mycursor.executemany(sql, val)
     mydb.commit() #commit changes to database
     print(mycursor.rowcount, "records inserted.")
-'''
-#insert multiple values
-if mydb.is_connected():
-    mycursor = mydb.cursor()
-    sql = "INSERT INTO customers (name,address,email) VALUES (%s, %s, %s)"
-    val = ("David", "456 Oak St", "hgsd@gmail")
-    mycursor.execute(sql, val)
-    mydb.commit()
-    print("1 record inserted, ID:", mycursor.lastrowid)
+
+# #insert multiple values
+# if mydb.is_connected():
+#     mycursor = mydb.cursor()
+#     sql = "INSERT INTO customers (name,address,email) VALUES (%s, %s, %s)"
+#     val = ("David", "456 Oak St", "hgsd@gmail")
+#     mycursor.execute(sql, val)
+#     mydb.commit()
+#     print("1 record inserted, ID:", mycursor.lastrowid)
